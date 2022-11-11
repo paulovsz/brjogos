@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    display: block;
+    background-image: url(img/lastofus.jpg);
+    background-repeat: no-repeat, repeat;
+    background-attachment: scroll, fixed;
+    background-blend-mode: luminosity;
+    height: 1000px;
+}
+
+.header {
+    min-height: 10vh;
+    width: 100vw;
+    background-color: #3F0071;
+    color: lightcyan;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+}
+.lista-menu {
+    /*ul*/
+    display: flex;
+    list-style-type: none;
+    font-size: 1.3rem;
+}
+
+.item-menu {
+    /*li*/
+    padding: 10px 15px;
+}
+
+.link-menu {
+    text-decoration: none;
+    color: lightcyan;
+    font-size: 1.6rem;
+}
+.link-menu:hover{
+    background-color: #E8DFCA;
+    border-radius: 2px;
+    color: darkcyan;
+}
+#icone-menu {
+    font-size: 2rem;
+    display: none;
+}
+.carrossel{
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+.titulo-carrossel{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:2;
+    width: 100%;
+    text-align: center;
+    font-size: 3.0rem;
+    color: #fff;
+    background-color: rgba(37, 125, 151, 0.472);
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: 50% 50%;
+}
+.link-carrossel{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+    background-color: #4C6793;
+    border-radius: 100px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:3;
+}
+.link-carrossel:hover{
+    background-color: #C7F2A4;
+    color: black;
+}
+.secoes{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 1px;
+    align-items:center;
+    justify-content:center;
+    
+}
+.div-secoes{
+    background-color: #FB2576;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+}
+.div-secoes:hover{
+    background-color: #FF9494;
+    border-radius: 15px;
+    color: black;
+    cursor: pointer;
+}
+.img-secoes{
+    width: 200px;
+    height: 130px;
+}
+.titulo-secoes{
+    background-color: lightblue;
+}
+.jogos{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: white;
+    padding: 25px;
+    margin: 10px 0px;
+    box-shadow: 2px 2px 50px black;
+}
+.div-jogos{
+    text-align: center;
+    font-size: 1.8rem;
+}
+.div-jogos ul{list-style-type: none;}
+.div-jogos ul li{padding: 10px 0px; text-transform: uppercase;}
+
+.img-jogos{
+    width: 75%;
+    height: 350px;
+    object-fit: fill;
+    border-radius: 15px;
+    box-shadow: 10px 10px 20px black;
+}
+.jogos1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: transparent;
+    padding: 25px;
+    margin: 10px 0px;
+    box-shadow: 2px 2px 50px black;
+}
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color: #3F0071 ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #89CFFD;
+    direction: rtl;
+}
+.img-footer{
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
+    filter: hue-rotate(90deg);
+}
+.lista-footer{
+    display: flex;
+    list-style-type: none;
+}
+.item-footer{
+    padding: 15px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .header {flex-direction: column;width: 100%;}
+    .lista-menu {flex-direction: column;text-align: center;}
+    #icone-menu {display: block;}
+    .item-menu {display: none;}
+    .ativar {display: block;}
+    .item-menu:hover {background-color: azure;
+        width: 0vw;color: black;
+    }
+    .link-menu:hover {color: black;}
+    #icone-menu:hover {background-color: lightpink;}
+    .carrossel{width: 100%; height: 50vh;position: relative;}
+    .link-carrossel{top: 90%;font-size: 1.2rem; text-align: center;}
+    .secoes,.jogos{grid-template-columns: 1fr;}
+    .footer{flex-direction: column;justify-content: center;height: auto;}
+}
